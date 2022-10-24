@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA WORLD CUP</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flipclock.css">  
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- HEADER =========================================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid d-lg-flex align-items-center justify-content-between">
+              <a class="navbar-brand m-0 p-0" href="#">
+                <img src="images/logo.png" alt="logo">
+              </a>
+              <button class="navbar-toggler border-0 shadow-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                  <li class="nav-item">
+                    <!-- USER NAME -->
+                    <!-- <a class="nav-link" href="#">用户名</a> -->
+                    <input type="text" placeholder="用户名" class="nav-link shadow-none bg-transparent">
+                  </li>
+
+                  <li class="nav-item">
+                    <!-- PASSWORD  -->
+                    <!-- <a class="nav-link d-flex justify-content-between align-items-center" href="#">密码 
+                    </a> -->
+                    <div class="position-relative">
+                      <input type="text" placeholder="密码" class="nav-link shadow-none bg-transparent">
+                      <span href="#" class="position-absolute forgot">忘记密码</span>
+                    </div>
+
+
+                  </li>
+
+                  <li class="nav-item">
+                    <!-- LOGIN  -->
+                    <a class="nav-link rounded-pill border-0" href="#" data-bs-toggle="modal" data-bs-target="#headerLogin">登录</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- REGISTER -->
+                    <a class="nav-link rounded-pill warn border-0" href="#" data-bs-toggle="modal" data-bs-target="#headerregister">注册</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="rounded-circle overflow-hidden flag me-2" href="#"><img src="images/england__flag.png" alt="england__flag"></a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                    <a class="rounded-circle overflow-hidden flag me-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/england__flag.png" alt="england__flag"></a>
+                    <ul class="dropdown-menu border-0 rounded-3 py-2 w-fit px-2 mt-2">
+                      <li><a class="dropdown-item flagi" href="#"><img class="w-100" src="images/england__flag.png" alt="england__flag"></a></li>
+                      <li><a class="dropdown-item flagi" href="#"><img class="w-100" src="images/england__flag.png" alt="england__flag"></a></li>
+                      <li><a class="dropdown-item flagi border-bottom-0 pb-0" href="#"><img class="w-100" src="images/england__flag.png" alt="england__flag"></a></li>
+                    </ul>
+                  </li>
+          
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- HEADER END =========================================== -->
+    <!-- MODAL LOGIN & RES.. -->
+    <!-- Button trigger modal -->
+
+    <!-- ALL POP UP BODY -->
+    <!-- LOGIN -->
+    <div class="modal default fade" id="headerLogin" tabindex="-1" aria-labelledby="headerLoginLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0 rounded-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="headerLoginLabel">Welcome</h5>
+          </div>
+          <div class="modal-body">
+            <!-- FORM FILL POP  -->
+            <form class="mt-4">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon2"><img src="images/phone-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username" aria-describedby="basic-addon2">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/lock-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon3">
+                <div id="didnt" class="form-text d-block w-100 fst-italic text-end">
+                  <a href="#" class="text-decoration-underline fst-italic">forgot Password? </a>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center py-3">
+                <button type="submit" class="btn shadow-none modal__btn">LOGIN</button>
+              </div>
+              <div class="no__account">
+                <p>
+                  Don't have an account?
+                  <a href="#" class="text-decoration-underline">Register</a>
+                </p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="modal default fade" id="headerregister" tabindex="-1" aria-labelledby="headerregisterLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0 rounded-0">
+          <div class="modal-header">
+              <h5 class="modal-title" id="headerLoginLabel">Registration</h5>
+          </div>
+          <div class="modal-body">
+            <!-- FORM FILL POP  -->
+            <form>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" aria-describedby="Name">
+                <div id="Name" class="form-text d-block w-100 fst-italic">* Full name must be matched with withdrawal bank account.
+                </div>
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon2"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/lock-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/lock-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/phone-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username" aria-describedby="basic-addon3">
+                <a href="#" type="button" class="input-group-text otp" id="basic-addon3">
+                  <button>Send OTP</button>
+                </a>
+                <div id="didnt" class="form-text d-block w-100 fst-italic text-end">
+                  Didn't received OPT Number
+                </div>
+
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="OTP Number" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="d-flex justify-content-center align-items-center py-3">
+                <button type="submit" class="btn shadow-none modal__btn">Register</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO =========================================== -->
+    <section class="banner">
+      <img class="w-100" src="images/Banner.png" alt="Banner">
+    </section>
+    <!-- HERO END =========================================== -->
+
+    <!-- BAR NUMBER =================================== -->
+    <section class="barTag">
+      <div class="container-fluid">
+        <div class=" barTag__content_z">
+          <div class="">
+            <div class="row justify-content-center">
+              <img class="barTag__888" src="images/888.png" alt="">
+            </div>
+            <div class="row justify-content-center position-relative">
+              <img class="barTag__prize" src="images/Prize.png" alt="">
+              <div class="position-absolute p-0 barTag__prize__btn">
+                <a href="#" class="warning__btn rounded-pill">立即参加</a>
+              </div>
+            </div>
+            <div class="row justify-content-center text-center">
+              <div class="col">
+                <div class="info-text">
+                <p class="barTag__info">
+                  * 玩家只需累积参加竞猜活动，就有机会参与抽奖并领取额外丰厚奖金.
+                </p>
+                <p class="barTag__info">
+                  * 玩家只需累积参加竞猜活动，就有机会参与抽奖并领取额外丰厚奖金.
+                </p>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- CARDS =============================================== -->
+          <section class="steps">
+            <div class="container-fluid">
+              <div class="row">
+                <img class="bar" src="images/Bar__Line.png" alt="BAR">
+              </div>
+              <div class="row mb-3">
+                <h3 class="section__tittle">如何参赛</h3>
+              </div>
+              <div class="row">
+                <div class="col-md-4 px-0">
+                  <div class="steps__layout">
+                    <div class="steps__layout_img">
+                      <img src="images/step_01.png" alt="STEPS">
+                    </div>
+                    <h5 class="steps__layout_tittle">
+                      步骤一
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-4 px-0">
+                  <div class="steps__layout">
+                    <div class="steps__layout_img">
+                      <img src="images/step_02.png" alt="STEPS">
+                    </div>
+                    <h5 class="steps__layout_tittle">
+                      注册成为会员
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-4 px-0">
+                  <div class="steps__layout">
+                    <div class="steps__layout_img">
+                      <img src="images/step_03.png" alt="STEPS">
+                    </div>
+                    <h5 class="steps__layout_tittle">
+                      选出您心目中的赢家
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- CARDS END =============================================== -->
+        </div>
+      </div>
+      <div class="side__menu text-end bg-transparent">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle shadow-none px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/side_menu.png" alt="">
+          </button>
+          <div class="dropdown-menu  border-0 bg-transparent">
+
+            <div class="side__menu__layout">
+              <div class="side__menu__logo ms-3">
+                <img class="w-100" src="images/white__logo@3x.png" alt="logo">
+              </div>
+              <div class="side__menu__link">
+                <ul class="m-0 p-0">
+                  <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/question.png" alt="icon"></div> 立即参加</a></li>
+                  <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/play-button.png" alt="icon"></div> 立即参加</a></li>
+                  <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/medal.png" alt="icon"></div> 立即参加</a></li>
+                  <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/alphabet.png" alt="icon"></div> 立即参加</a></li>
+                  <!-- QR  -->
+                  <li class="rounded-4 mb-2 bg-white">
+                    <a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/comment.png" alt="icon"></div> 立即参加</a>
+                    <div class="side__qr"><img class="w-100" src="images/QR.png" alt="qr"></div>
+                    <div class="side__qr text text__primary text-center mt-1">立即 参 参 加</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+
+
+        <div class="side__menu__layout big__screen">
+          <div class="side__menu__logo ms-3">
+            <img class="w-100" src="images/white__logo@3x.png" alt="logo">
+          </div>
+          <div class="side__menu__link">
+            <ul class="m-0 p-0">
+              <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/question.png" alt="icon"></div> 立即参加</a></li>
+              <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/play-button.png" alt="icon"></div> 立即参加</a></li>
+              <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/medal.png" alt="icon"></div> 立即参加</a></li>
+              <li class="rounded-pill mb-2 bg-white"><a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/alphabet.png" alt="icon"></div> 立即参加</a></li>
+              <!-- QR  -->
+              <li class="rounded-4 mb-2 bg-white">
+                <a href="#" class="text__primary"><div class="me-2"><img class="w-75" src="images/comment.png" alt="icon"></div> 立即参加</a>
+                <div class="side__qr"><img class="w-100" src="images/QR.png" alt="qr"></div>
+                <div class="side__qr text text__primary text-center mt-1">立即 参 参 加</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <img class="w-100 h-100 d-none" src="images/Background.png" alt="Background">
+    </section>
+    <!-- BAR NUMBER END =================================== -->
+
+    <!-- MATCHES SELECT ==========================  -->
+    <section class="matchBar timer tab match">
+      <div class="container-fluid">
+
+        <div class="row">
+          <img class="bar mb-4" src="images/Bar__Line.png" alt="BAR">
+        </div>
+        <h3 class="section__tittle mb-3">预测谁是赢家</h3>
+        <div class="row justify-content-center">
+          <!-- TABS TABLE  -->
+          <ul class="nav nav-tabs rounded-pill" id="myTab2" role="tablist2">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-pill border-0 active" id="home-tab1" data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane1" type="button" role="tab" aria-controls="home-tab-pane1"
+                aria-selected="true">第一回合</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="profile-tab1" data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane1" type="button" role="tab" aria-controls="profile-tab-pane1"
+                aria-selected="false">第二回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab1" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane1" type="button" role="tab" aria-controls="contact-tab-pane1"
+                aria-selected="false">第三回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab2" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane2" type="button" role="tab" aria-controls="contact-tab-pane2"
+                aria-selected="false">第四回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab3" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane3" type="button" role="tab" aria-controls="contact-tab-pane3"
+                aria-selected="false">第五回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab4" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane4" type="button" role="tab" aria-controls="contact-tab-pane4"
+                aria-selected="false">第六回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab5" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane5" type="button" role="tab" aria-controls="contact-tab-pane5"
+                aria-selected="false">第七回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab6" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane6" type="button" role="tab" aria-controls="contact-tab-pane6"
+                aria-selected="false">第八回合</button>
+            </li>
+            <li class="nav-item me-0" role="presentation">
+              <button class="nav-link rounded-pill border-0" id="contact-tab7" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane7" type="button" role="tab" aria-controls="contact-tab-pane7"
+                aria-selected="false">决赛冠亚季</button>
+            </li>
+          </ul>
+          <div class="tab-content mt-0 pt-0" id="myTabContent2">
+            <div class="tab-pane fade show active" id="home-tab-pane1" role="tabpanel" aria-labelledby="home-tab1"
+              tabindex="0">
+
+              <!-- ==================  -->
+
+              <div class="row justify-content-center">
+                <div class="timer__layout">
+                  <div class="clock-builder-output"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="notice__message d-flex justify-content-center align-items-center">
+                  <img src="images/notice.png" alt="speaker">
+                  <p class="mb-0">点击足球队logo为选择该队伍</p>
+                </div>
+              </div>
+
+              <div class="row justify-content-center align-items-center flex-wrap">
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative w-100" src="images/us__card__flag.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img class="w-100" src="images/other__card__flag.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative me-0">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+              </div>
+              <div class="row justify-content-center align-items-center flex-wrap">
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative me-0">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+              </div>
+              <div class="row justify-content-center align-items-center flex-wrap">
+                <!-- ========== ========= UPDATE ======== =====================  -->
+                <div class="bar__layout update position-relative">
+                  <!-- REAL CONTENT  -->
+                  <div class="top__bar_time">
+                    <p>
+                      <span>21-Nov-2022</span>
+                      <span class="mx-3">|</span>
+                      <span>6pm</span>
+                    </p>
+                  </div>
+                  <!-- LEFT SIDE FLAG  -->
+                  <div class="circle__flag left">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+
+                  <!-- RIGHT SIDE FLAG  -->
+                  <div class="circle__flag right">
+                    <img class="rounded-circle" src="images/vsTeam__circle_flag.png" alt="flag">
+                  </div>
+                  <!-- LEFT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle mb-0 left">塞内加尔</p>
+                  <!-- RIGHT SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle right mb-0 ">荷兰</p>
+                  <!-- CENTRE SIDE FLAG CONTENT TITTLE -->
+                  <p class="bar__flag_tittle center mb-0 ">GROUP A</p>
+
+                  <!-- NEXT BODY PART SLEETED FLAGS  -->
+                  <div class="bar__vs d-flex align-items-center justify-content-center">
+                    <div class="country__flag tab_img_hover"><a href="#">
+                      <img  class="position-relative" src="images/Senegal.png" alt="flag1">
+                    </a></div>
+                    <div class="country__vs"><img class="w-100" src="images/vs__bar.png" alt="vs"></div>
+                    <div class="country__flag tab_img_hover2" ><a href="#"><img  src="images/Netherlands.png" alt="flag1"></a></div>
+                  </div>
+
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/simple.png" alt="back">
+                </div>
+                <!-- ========== ================= =====================  -->
+                <!-- ========== ========= UPDATE TIMER ======== =====================  -->
+                <div class="bar__layout update timer position-relative d-flex justify-content-center align-items-center h-100">
+                  <!-- ======= TIMER ======  -->
+                  <div class="card__timer position-absolute py-0">
+                    <div class="d-flex justify-content-center align-items-center h-100 flex-column">
+                      <h3>Upcoming Match</h3>
+                      <div class="mini__timer">
+                        <div class="clock-builder-output-mini mx-auto my-0"></div>
+                      </div>
+                    </div>  
+                  </div>
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/template.png" alt="back">
+                </div>
+                <!-- ===== ============= =============== ====================  -->
+                <!-- ========== ========= UPDATE TIMER ======== =====================  -->
+                <div class="bar__layout update timer position-relative d-flex justify-content-center align-items-center h-100">
+                  <!-- ======= TIMER ======  -->
+                  <div class="card__timer position-absolute py-0">
+                    <div class="d-flex justify-content-center align-items-center h-100 flex-column">
+                      <h3>Upcoming Match</h3>
+                      <div class="mini__timer">
+                        <div class="clock-builder-output-mini-1 mx-auto my-0"></div>
+                      </div>
+                    </div>  
+                  </div>
+                  <!-- BACK IMG  -->
+                  <img class="w-100" src="images/template.png" alt="back">
+                </div>
+                <!-- ===== ============= =============== ====================  -->
+                
+                
+              </div>
+
+
+
+
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane1" role="tabpanel" aria-labelledby="profile-tab1" tabindex="0">
+             2 </div></div>
+            <div class="tab-pane fade" id="contact-tab-pane1" role="tabpanel" aria-labelledby="contact-tab1" tabindex="0">
+              3</div>
+            <div class="tab-pane fade" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2" tabindex="0">
+              4</div>
+            <div class="tab-pane fade" id="contact-tab-pane3" role="tabpanel" aria-labelledby="contact-tab3" tabindex="0">
+              5</div>
+            <div class="tab-pane fade" id="contact-tab-pane4" role="tabpanel" aria-labelledby="contact-tab4" tabindex="0">
+              6</div>
+            <div class="tab-pane fade" id="contact-tab-pane5" role="tabpanel" aria-labelledby="contact-tab5" tabindex="0">
+              7</div>
+            <div class="tab-pane fade" id="contact-tab-pane6" role="tabpanel" aria-labelledby="contact-tab6" tabindex="0">
+              8</div>
+            <div class="tab-pane fade" id="contact-tab-pane7" role="tabpanel" aria-labelledby="contact-tab7" tabindex="0">
+              9</div>
+          </div>
+  
+        </div>
+
+
+        <!-- BTNS  -->
+        <div class="row mx-2">
+          <ul class="p-0 d-flex justify-content-center align-items-center group__btns">
+            <li><a href="#" class="secondary__btn rounded-pill text-white">提交</a></li>
+            <li><a href="#" class="secondary__btn  rounded-pill text-white">提交</a></li>
+            <li><a href="#" class="warning__btn rounded-pill me-0">提交</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- MATCHES SELECT END ==========================  -->
+
+
+
+
+
+    <!-- TABLE ============================================ -->
+    <section class="tab">
+      <div class="container-fluid">
+          <div class="row">
+            <img class="bar" src="images/Bar__Line.png" alt="BAR">
+          </div>
+          <div class="row justify-content-center tab-bar">
+            <!-- TABS TABLE  -->
+            <ul class="nav nav-tabs rounded-pill" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill border-0 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">排行榜</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill border-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">已预测赛事</button>
+              </li>
+              <li class="nav-item me-0" role="presentation">
+                <button class="nav-link rounded-pill border-0" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">赛事结果</button>
+              </li>
+              
+            </ul>
+            <div class="tab-content mt-0 pt-0" id="myTabContent">
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <!-- TABLE HEADER  -->
+                <table class="table mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">回合</th>
+                      <th scope="col">赛事</th>
+                      <th scope="col">我的预测 </th>
+                      <th scope="col">胜出队伍</th>
+                      <th scope="col">分数</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <!-- LOGO USER  -->
+                      <img class="table__user" src="images/table_row_icon.png" alt="logo">
+                      第一回合
+                    </th>
+                      <td>英格兰 vs 德国</td>
+                      <td>德国</td>
+                      <td>@英格兰</td>
+                      <td>+0</td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">2</div>
+              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">3</div>
+            </div>
+            
+          </div>
+      </div>
+    </section>
+    <!-- TABLE  END ============================================ -->
+    <!-- Accordion ===========================================  -->
+    <section class="faqs">
+        <div class="container">
+          <div class="row">
+            <img class="bar" src="images/Bar__Line.png" alt="BAR">
+          </div>
+          <div class="row">
+            <h3 class="section__tittle">活动详情</h3>
+          </div>
+          <div class="row">
+              <div class="col px-sm-0">
+                  <div class="accordion" id="accordionExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              活动介绍
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <p>
+                                  社門燥気近就面抗点稚都転疑年反話応。誌太児著囲貨木文特受庭国東載策直。読水件計場得連農追挙状西。極若舎敷述表軽北社念売予調養保総肉払当属。相家女一準逃眠容告写国織熱綾入芸女質惑。旅世長化囲判牟慢共光芸個職規月率喜図。望火内会長車消覚出時一界意教豊作問両写試。向内早転原金消主右見委意転野面京策。
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            活动介绍
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>
+                              社門燥気近就面抗点稚都転疑年反話応。誌太児著囲貨木文特受庭国東載策直。読水件計場得連農追挙状西。極若舎敷述表軽北社念売予調養保総肉払当属。相家女一準逃眠容告写国織熱綾入芸女質惑。旅世長化囲判牟慢共光芸個職規月率喜図。望火内会長車消覚出時一界意教豊作問両写試。向内早転原金消主右見委意転野面京策。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            活动介绍
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>
+                              社門燥気近就面抗点稚都転疑年反話応。誌太児著囲貨木文特受庭国東載策直。読水件計場得連農追挙状西。極若舎敷述表軽北社念売予調養保総肉払当属。相家女一準逃眠容告写国織熱綾入芸女質惑。旅世長化囲判牟慢共光芸個職規月率喜図。望火内会長車消覚出時一界意教豊作問両写試。向内早転原金消主右見委意転野面京策。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+    </section>
+    <!-- Accordion END ===========================================  -->
+     
+    <!-- FOOTER ==============================================  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="d-flex align-items-center justify-content-lg-center">
+                        <li><a href="#">条款与条件</a></li>
+                        <li><a href="#">条款与条件</a></li>
+                        <li class="divider d-none d-lg-block "></li>
+                        <li class="be_city_text"><a href="#">赞助方:</a></li>  
+                        <li><a href="#" class="border-bottom-0"><img class="be_city" src="images/be__city.png" alt="be__city"></a></li> 
+                    </ul>
+                </div>
+                 
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END ==============================================  -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/flipclock.js"></script>
+    <style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #ffffff; background-color: #29295a; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #ffffff; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #ffffff; }</style>
+    <script type="text/javascript">
+      $(function(){
+      FlipClock.Lang.Custom = { days:'Days', hours:'小时', minutes:'分钟', seconds:'秒' };
+      var opts = {
+        clockFace: 'HourCounter',
+        countdown: true,
+        language: 'Custom'
+      };  
+      var countdown = 1661413920 - ((new Date().getTime())/1000); // from: 08/25/2022 12:52 am -0700
+      countdown = Math.max(1, countdown);
+      $('.clock-builder-output').FlipClock(countdown, opts);
+      });
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA MY PROFILE </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER  -->
+  <header class="header__app">
+    <div class="page__back"><a href="#"><img class="w-100" src="images/back__btn.png" alt=""></a></div>
+    <h6 class="head__tittle">我的资料</h6>
+  </header>
+  <main>
+
+    <!-- FORM  -->
+    <form class="myProfile">
+      <div class="myProfile__input">
+        <label for="number" class="form-label">手机号码：</label>
+        <input type="tel" class="form-control" id="number">
+      </div>
+      
+      <div class="myProfile__input">
+        <label for="number" class="form-label">用户名：</label>
+        <input type="text" class="form-control mb-2" id="number" aria-describedby="message">
+        <div id="message" class="form-text">您只可以更改一次。</div>
+      </div>
+    </form>
+    <h4 class="update">更新密码：</h4>
+    <!-- FORM  -->
+    <form class="myProfile password">
+      <div class="myProfile__input">
+        <label for="number" class="form-label">当前密码：</label>
+        <input type="password" class="form-control" placeholder="当前密码：" id="pass">
+      </div>
+      
+      <div class="myProfile__input">
+        <label for="number" class="form-label">新密码：</label>
+        <input type="text" class="form-control mb-2" id="number" placeholder="新密码" aria-describedby="message">
+      </div>
+
+      <div class="myProfile__input">
+        <label for="number" class="form-label">重复输入密码：</label>
+        <input type="password" class="form-control" placeholder="重复输入密码" id="pass">
+      </div>
+
+      <div class="text-center pt-sm-4">
+        <button type="submit" class="btn shadow-none">更换密码</button>
+      </div>
+
+
+    </form>
+  </main>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

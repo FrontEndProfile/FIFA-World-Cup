@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA WORLD CUP</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- === HEADER ====================================================  -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid bg-transparent d-lg-flex align-items-center justify-content-between px-4">
+        <button class="navbar-toggler border-0 shadow-none ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand m-0 p-0" href="#">
+          <img src="images/logo.png" alt="logo">
+        </a>
+
+
+        <div class="dropdown change">
+          <a class="shadow-none p-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="flag  w-100" src="images/england__flag.png" alt="logo">
+          </a>
+        
+          <ul class="dropdown-menu border-0 shadow mt-1 p-0 ">
+            <li><a class="dropdown-item" href="#"><img class="flag" src="images/england__flag.png" alt="logo"></a></li>
+            <li><a class="dropdown-item" href="#"><img class="flag" src="images/england__flag.png" alt="logo"></a></li>
+            <li><a class="dropdown-item" href="#"><img class="flag" src="images/england__flag.png" alt="logo"></a></li>
+          </ul>
+        </div>
+
+        <!-- =================================  -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
+            <button type="button" class="btn-close ms-auto shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <!-- Sub-nav  -->
+              <nav class="my-4">
+                <ul class="sub__nav side">
+                  <li class="nav-item ">
+                    <input type="text" placeholder="用户名" class="nav-link rounded-pill shadow-none bg-white w-100">
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="nav-link w-100 bg-white d-flex justify-content-between align-items-center rounded-pill" href="#">密码 
+                    <span href="#">忘记密码</span>
+                    </a> -->
+                    <div class="position-relative">
+                      <input type="text" placeholder="密码" class="nav-link rounded-pill shadow-none bg-white w-100">
+                      <span href="#" class="position-absolute forgot">忘记密码</span>
+                    </div>
+                  </li>
+                  <div class="d-flex align-items-center justify-content-center pt-3">
+                    <li class="nav-item">
+                      <a class="nav-link r rounded-pill border-0" href="#" data-bs-toggle="modal" data-bs-target="#headerLogin">登录</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link r rounded-pill warn border-0" href="#" data-bs-toggle="modal" data-bs-target="#headerregister">注册</a>
+                    </li>
+                  </div>
+                </ul>
+              </nav>
+              <!-- FOOTER MENU  -->
+              <ul class="side__pages">
+                <li>
+                  <a href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="links__icon">
+                        <img src="images/side__user.png" alt="user">
+                      </div>
+                      <p class="mb-0">我的资料</p>
+                    </div>
+                  </a>
+                </li>
+                <li><img class="w-100" src="images/Bar__Line.png" alt="line"></li>
+                <!-- ===  -->
+                <li>
+                  <a href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="links__icon winner">
+                        <img  src="images/side_213.png" alt="user">
+                      </div>
+                      <p class="mb-0">得奖者名单</p>
+                    </div>
+                  </a>
+                </li>
+                <li><img class="w-100" src="images/Bar__Line.png" alt="line"></li>
+                <!-- ===  -->
+                <li>
+                  <a href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="links__icon info">
+                        <img  src="images/side__info.png" alt="user">
+                      </div>
+                      <p class="mb-0">活动详情</p>
+                    </div>
+                  </a>
+                </li>
+                <li><img class="w-100" src="images/Bar__Line.png" alt="line"></li>
+                <!-- ===  -->
+                <li>
+                  <a href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="links__icon message">
+                        <img src="images/side__message.png" alt="user">
+                      </div>
+                      <p class="mb-0">我的疑问</p>
+                    </div>
+                  </a>
+                </li>
+                <li><img class="w-100" src="images/Bar__Line.png" alt="line"></li>
+                <!-- ===  -->
+                <li>
+                  <a href="#">
+                    <div class="d-flex align-items-center">
+                      <div class="links__icon">
+                        <img src="images/side_chat.png" alt="user">
+                      </div>
+                      <p class="mb-0">我的疑问</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                <li>
+                  <a href="#" class="disabled">
+                    <div class="d-flex align-items-center">
+                      <div class="side_qr rounded-4 overflow-hidden  mx-auto mt-3">
+                        <img class="w-100" src="images/side__qr.png" alt="user">
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                <!-- ===  -->
+
+              </ul>
+
+              <div class="side__footer_end d-flex align-items-center justify-content-center">
+                <h5>赞助方：</h5>
+                <img src="images/side__becity.png" alt="BETCITY">
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================ -->
+      <!-- ALL POP UP BODY -->
+    <!-- LOGIN -->
+    <div class="modal default fade" id="headerLogin" tabindex="-1" aria-labelledby="headerLoginLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0 rounded-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="headerLoginLabel">温馨提示</h5>
+          </div>
+          <div class="modal-body">
+            <!-- FORM FILL POP  -->
+            <h5 class="modal-title text-center warn" id="headerLoginLabel">确定此选择？</h5>
+            <p class="text-center py-2 warn__text">
+              确定选择后不得做任何更改，谢谢！
+            </p>
+            <section class="three__btns p-0 m-0">
+              <div class="container p-0 m-0">
+                  <div class="d-flex justify-content-center align-items-center flex-wrap">
+                      
+                      <div class="me-2">
+                          <a class="gold__btn mx-auto" href="#">
+                            确定
+                          </a>
+                      </div>
+                      <div class=" me-3">
+                        <a class="gray__btn mx-auto" href="#">
+                          更改
+                        </a>
+                    </div>
+                  </div>
+              </div>
+          </section>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="modal default fade" id="headerregister" tabindex="-1" aria-labelledby="headerregisterLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0 rounded-0">
+          <div class="modal-header">
+              <h5 class="modal-title" id="headerLoginLabel">Registration</h5>
+          </div>
+          <div class="modal-body">
+            <!-- FORM FILL POP  -->
+            <form>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" aria-describedby="Name">
+                <div id="Name" class="form-text d-block w-100 fst-italic">* Full name must be matched with withdrawal bank account.
+                </div>
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon2"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/lock-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/lock-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/phone-solid.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username" aria-describedby="basic-addon3">
+                <a href="#" type="button" class="input-group-text otp" id="basic-addon3">
+                  <button>Send OTP</button>
+                </a>
+                <div id="didnt" class="form-text d-block w-100 fst-italic text-end">
+                  Didn't received OPT Number
+                </div>
+
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3"><img src="images/user__white.svg" alt=""></span>
+                <input type="text" class="form-control" placeholder="OTP Number" aria-label="Username" aria-describedby="basic-addon3">
+              </div>
+
+              <div class="d-flex justify-content-center align-items-center py-3">
+                <button type="submit" class="btn shadow-none modal__btn">Register</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===========================  -->
+    <!-- ===========================  -->
+    <!-- ===========================  -->
+
+
+
+
+  <!-- Sub-nav  -->
+  <nav class="my-4 header__bottom">
+    <ul class="sub__nav d-flex  align-items-start flex-row justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link rounded-pill" href="#">用户名</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center rounded-pill" href="#">密码 
+        <span href="#">忘记密码</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link r rounded-pill border-0" href="#">登录</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link r rounded-pill warn border-0" href="#">注册</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- === HEADER END ====================================================  -->
+  <!-- === BANNER ===================================================  -->
+  <section class="banner">
+    <div class="container-fluid px-4">
+      <div class="row m-0">
+        <div class="col px-0">
+          <img class="banner__img w-100" src="images/Banner.png" alt="banner">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- === BANNER END ===================================================  -->
+  <div class="wrapper">
+  <!-- === STAGE ===================================================  -->
+    <section class="stage">
+      <div class="container-fluid px-4">
+        <div class="row m-0">
+          <div class="col px-0 text-center">
+            <img class="stage__img w-100" src="images/Jacpot.png" alt="banner">
+          </div>
+        </div>
+        <div class="row m-0">
+          <div class="col-12 px-0">
+            <img class="stage__mean w-100" src="images/stage.png" alt="banner">
+          </div>
+          <div class="stage__content text-center">
+            <p class="prototype__ mb-1">
+              * 玩家只需累积参加竞猜活动，就有机会参与抽奖并领取额外丰厚奖金.
+            </p>
+            <p class="prototype__ mb-1">
+              * 感谢金主爸爸 <span class="english__font">BETCITY</span> 冠名赞助所有奖金礼品.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- === STAGE END ===================================================  -->
+  <!-- === STEP-ING ===================================================  -->
+  <section class="step py-5">
+    <div class="container-fluid px-4">
+      <div class="row m-0">
+        <div class="col-12 px-0 d-flex justify-content-center">
+          <div class="step__bar">如何参赛</div>
+        </div>
+      </div>
+      
+      <div class="row m-0">
+        <div class="step__border">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="step_01">
+              <img class="w-100" src="images/home_page_step_01.png" alt="">
+            </div>
+            <div class="step_02">
+              <img class="w-100" src="images/home_page_step_02.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- === STEP-ING END ===================================================  -->
+
+  <footer>
+    <div class="container-fluid px-4">
+      <div class="row m-0">
+        <div class="col-12 px-0">
+          <ul class="d-flex align-items-center justify-content-center footer__menu">
+            <li><a href="#">
+              <div class="footer_menu_up">
+                <img class="footer_icon" src="images/football.svg" alt="footer icon link">
+              </div>
+              <p class="mb-0">开始游戏</p>
+            </a></li>
+            <li><a href="#">
+              <div class="footer_menu_up ">
+                <img class="footer_icon level" src="images/213.svg" alt="footer icon link">
+              </div>
+              <p class="mb-0">开始游戏</p>
+            </a></li>
+            <li><a href="#">
+              <div class="footer_menu_up">
+                <img class="footer_icon" src="images/info.svg" alt="footer icon link">
+              </div>
+              <p class="mb-0">开始游戏</p>
+            </a></li>
+            <li><a href="#">
+              <div class="footer_menu_up">
+                <img class="footer_icon" src="images/user.svg" alt="footer icon link">
+              </div>
+              <p class="mb-0">开始游戏</p>
+            </a></li>
+
+          </ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  </div>
+
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
